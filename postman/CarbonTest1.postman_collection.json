@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "693735f6-21c6-472c-bfd0-497152f998eb",
+		"name": "Carbon Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2011017"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users - Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"joeblogs2@example.com\",\r\n  \"email\": \"joeblogs2@example.com\",\r\n  \"givenName\": \"Jim\",\r\n  \"familyName\": \"Bligs\",\r\n  \"picture\": \"\",\r\n  \"password\": \"P@ssword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Get All",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pageNumber\": 1,\r\n  \"pageSize\": 10,\r\n  \"search\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Get Single",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token - Get New",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"joe@example.com\",\r\n    \"password\": \"P@ssword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token - Get new with RefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\": \"2GJNiYyL3qqZ+oaFJ7S9d0IgIe5EDScQJqu9WI6YROmwQnv44amNRulHavIzQ48oqYzAbOLeEpX+EN0iqJFltg==\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"451dd21c-7a4a-4ec9-8302-5d35b2f715c6\",\r\n  \"givenName\": \"Joseph\",\r\n  \"familyName\": \"Blogos\",\r\n  \"email\": \"josephblogos@example.com\",\r\n  \"username\": \"josephblogos@example.com\",\r\n  \"picture\": \"\",\r\n  \"isActive\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contacts",
+			"item": [
+				{
+					"name": "Contacts - Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Smith\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/contacts/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contacts",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contacts - Get Single",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "CarbonId",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/contacts/19",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contacts",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contacts - Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"firstName\": \"Jackie\",\r\n    \"lastName\": \"Gidney\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/contacts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contacts - Delete Single",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/contacts/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contacts",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contacts - Get All",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pageNumber\": 1,\r\n  \"pageSize\": 10,\r\n  \"search\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/contacts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkMTljMmViYy0wZTRiLTRlZDQtODU5My1hNGU2ZDRiODQyYmYiLCJnaXZlbl9uYW1lIjoiSm9lIiwiZmFtaWx5X25hbWUiOiJCbG9nIiwiZW1haWwiOiJqb2VAZXhhbXBsZS5jb20iLCJwaWN0dXJlIjoiaHR0cHM6Ly9ncmF2YXRhci5jb20vYXZhdGFyLzE0YjQwMmJlZDA5NWZiMjIwOTM2NjE3ZDk4ZjNhZWE0P3M9MjAwIiwiY29tcGFueUlkIjoyLCJyb2xlcyI6WyJBZG1pbmlzdHJhdG9yIl0sIm5iZiI6MTY4MDU5OTEzOSwiZXhwIjoxNjgwNjI5MTM5LCJpYXQiOjE2ODA1OTkxMzl9.SE2d38HkWEBfDeIV_vsT_P_rCInapJJkX7tV0XGE88w",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://localhost:44352"
+		}
+	]
+}
