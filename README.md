@@ -11,7 +11,16 @@ Overall, this flow allows for separation of concerns, with the UI handling prese
 
 By using this pattern, the API, Service Layer, and Data Layer can be developed independently, allowing for flexibility in choosing different technologies for each layer and promoting code reusability and maintainability.
 
->**In summary**, the API receives data from the UI, passes it to the Service Layer for business logic processing, and the Service Layer interacts with the Data Layer using Data Models for data management. The Data Layer, in turn, works with repositories for database operations, and the use of Dto's or ViewModels and Data Models promotes separation of concerns and maintainability in the software architecture. Good luck! If you have any further questions, feel free to ask. I'm here to help!
+>**In short**, the API receives data from the UI, passes it to the Service Layer for business logic processing, and the Service Layer interacts with the Data Layer using Data Models for data management. The Data Layer, in turn, works with repositories for database operations, and the use of Dto's or ViewModels and Data Models promotes separation of concerns and maintainability in the software architecture. 
+
+In conclusion, if you are using Blazor as the front-end for your UI, it is possible to use the Service Layer directly. However, it is still recommended to write a separate API layer to properly decouple your UI from your business logic.This separation of concerns promotes maintainability and flexibility in the architecture. 
+
+By following best practices and design principles, developers can create readable, understandable, and maintainable code that facilitates smooth development and maintenance of web applications. Remember to always strive for clean and modular code that promotes maintainability and scalability.
+
+
+Good luck! If you have any further questions, feel free to ask. I'm here to help!
+
+---
 
 **CarbonDbContext** - Contain all users, system-wide config, etc.
 
