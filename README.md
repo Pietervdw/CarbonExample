@@ -15,7 +15,7 @@ By using this pattern, the API, Service Layer, and Data Layer can be developed i
 
 In conclusion, if you are using Blazor as the front-end for your UI, it is possible to use the Service Layer directly. However, it is still recommended to write a separate API layer to properly decouple your UI from your business logic.This separation of concerns promotes maintainability and flexibility in the architecture. 
 
-By following best practices and design principles, developers can create readable, understandable, and maintainable code that facilitates smooth development and maintenance of web applications. Remember to always strive for clean and modular code that promotes maintainability and scalability.
+By following best practices and design principles, developers can create readable, understandable, and maintainable code that facilitates smooth development and maintenance of applications. Remember to always strive for clean and modular code that promotes maintainability and scalability.
 
 
 Good luck! If you have any further questions, feel free to ask. I'm here to help!
